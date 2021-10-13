@@ -5,8 +5,17 @@ $(document).ready(() => {
         $("#sign_up").toggle()
     })
 
-    $("#message").click(() => {
 
+
+    $("#signform").submit((e) => {
+        $("#sign_up").hide()
+        $("#signform").trigger("reset");
+        e.preventDefault();
+    })
+
+    $("#myform").submit((e) => {
+        $("#myform").trigger("reset");
         $('#exampleModal').modal('hide')
+        e.preventDefault();
     })
 })

@@ -51,17 +51,46 @@
   <div class="row" id="sign_up">
     <div class="offset-md-3 col-md-6" style="padding: 50px;">
 
-      <h1 style="">Sign Up</h1>
-      <form>
+      <h1>Sign Up</h1>
+      <form id='signform'>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input type="text" class="form-control" id="surname" placeholder="Enter surname" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="Enter address" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">DOB</label>
+          <input type="date" class="form-control" id="dob" placeholder="Enter DOB" required>
+        </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email" required>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+          <label for="contact">Contact #</label>
+          <input type="text" class="form-control" id="contact" placeholder="Contact #">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Area of Interest</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2" required>
+            <option>Math</option>
+            <option>Science</option>
+            <option>Social Studies</option>
+            <option>Language Arts</option>
+            <option>Spirituality</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1">Terms and Conditions</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -239,18 +268,18 @@
         <div class="modal-body">
           <form id="myform">
             <div class="form-group">
-              <label for="Email-name" class="col-form-label">Email:</label>
+              <label for="Email-name" class="col-form-label">Email: (required)</label>
               <input type="email" class="form-control" id="Email-name" required>
             </div>
             <div class="form-group">
-              <label for="message-text" class="col-form-label">Message:</label>
+              <label for="message-text" class="col-form-label">Message: (required)</label>
               <textarea class="form-control" id="message-text" required></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" id="message">Send Message</button>
+          <button type="submit" class="btn btn-primary" id="message" form="myform">Send Message</button>
         </div>
       </div>
     </div>
