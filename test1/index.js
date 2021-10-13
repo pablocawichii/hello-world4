@@ -5,6 +5,8 @@ $(document).ready(() => {
         $("#sign_up").toggle()
     })
 
-    
-    $('#exampleModal').hide()
+    $("#message").click(() => {
+
+        $('#exampleModal').modal('hide')
+    })
 })
