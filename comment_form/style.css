@@ -1,0 +1,19 @@
+html {
+  background-color: #a1a1a1;
+}
+
+#comments {
+  background-color: white;
+  max-width: 500px;
+  padding: 50px;
+}
+
+#comments p {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #666b69;
+  color: white;
+}
