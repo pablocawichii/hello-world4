@@ -1,6 +1,6 @@
 <?php
+include "header.php";
 
-session_start();
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: index.php");
     exit;
@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    <div class="wrapper br grid-container">
+    <div class="wrapper br grid-container"  style="max-width: 500px; margin:0 auto;">
 
         <div class="grid-item">
         <h2>Welcome Back!</h2>
