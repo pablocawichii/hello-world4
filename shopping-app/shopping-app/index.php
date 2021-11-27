@@ -69,9 +69,13 @@ require_once 'config.php';
                 <h5 class='card-title'>$row->title</h5>
                 <p class='card-text'>$row->description</p>
                 <span>
-                  $$row->price
-                  <button class='btn btn-primary add_to_cart' data-id='$row->item_id' >Add to Cart</button>
-                </span>
+                  $$row->price";
+                  if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+                    echo "
+                      <button class='btn btn-primary add_to_cart' data-id='$row->item_id' >Add to Cart</button>
+                    ";
+                  };
+                echo "</span>
                 </div>
                 </div>
                 </div>

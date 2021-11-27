@@ -46,7 +46,7 @@ session_start();
             <a class="nav-link btn" href="./index.php#items">Items</a>
           </li>
           <?php
-            if (isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
+            if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
               echo '
                 <li class="nav-item">
                   <a class="nav-link btn" href="./checkout.php">Checkout</a>
@@ -58,7 +58,7 @@ session_start();
         <div class="form-inline my-2 my-lg-0">
           <ul class="navbar-nav mr-auto">
             <?php 
-              if (isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true) {
+              if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                   echo '
                   <li>
                   <a
